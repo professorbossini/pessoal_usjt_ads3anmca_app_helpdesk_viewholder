@@ -1,4 +1,4 @@
-package br.com.bossini.usjt_ads3anmca_app_helpdesk;
+package br.com.bossini.pessoal_usjt_ads3anmca_app_helpdesk_viewholder;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

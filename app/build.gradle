@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "br.com.bossini.usjt_ads3anmca_app_helpdesk"
+        applicationId "br.com.bossini.pessoal_usjt_ads3anmca_app_helpdesk_viewholder"
         minSdkVersion 22
         targetSdkVersion 28
         versionCode 1

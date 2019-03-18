@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="br.com.bossini.usjt_ads3anmca_app_helpdesk.MainActivity">
+    tools:context="br.com.bossini.pessoal_usjt_ads3anmca_app_helpdesk_viewholder.MainActivity">
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"

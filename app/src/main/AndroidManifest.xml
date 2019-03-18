@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="br.com.bossini.usjt_ads3anmca_app_helpdesk">
+    package="br.com.bossini.pessoal_usjt_ads3anmca_app_helpdesk_viewholder">
 
     <application
         android:allowBackup="true"
@@ -9,10 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DetalhesChamadoActivity"></activity>
-        <activity android:name=".ListaChamadosActivity" />
+        <activity android:name="br.com.bossini.pessoal_usjt_ads3anmca_app_helpdesk_viewholder.DetalhesChamadoActivity"></activity>
+        <activity android:name="br.com.bossini.pessoal_usjt_ads3anmca_app_helpdesk_viewholder.ListaChamadosActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name="br.com.bossini.pessoal_usjt_ads3anmca_app_helpdesk_viewholder.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
