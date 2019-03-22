@@ -24,9 +24,8 @@ public class ListaChamadosActivity extends AppCompatActivity {
         Intent origemIntent = getIntent();
         String nomeFila = origemIntent.getStringExtra("nome_fila");
         final List <Chamado> chamados = busca(nomeFila);
-        ArrayAdapter <Chamado> adapter =
-                new ArrayAdapter<>(this,
-                        android.R.layout.simple_list_item_1, chamados);
+        ChamadoArrayAdapter adapter =
+                new ChamadoArrayAdapter(this, chamados);
         chamadosListView.setAdapter(adapter);
         chamadosListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
