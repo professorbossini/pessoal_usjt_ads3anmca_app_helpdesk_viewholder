@@ -3,10 +3,10 @@ package br.com.bossini.pessoal_usjt_ads3anmca_app_helpdesk_viewholder;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -14,20 +14,23 @@ import java.util.List;
 
 public class ListaChamadosActivity extends AppCompatActivity {
 
-    private ListView chamadosListView;
+    private RecyclerView chamadosRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_chamados);
-        chamadosListView = findViewById(R.id.chamadosListView);
+        chamadosRecyclerView = findViewById(R.id.chamadosRecyclerView);
         Intent origemIntent = getIntent();
         String nomeFila = origemIntent.getStringExtra("nome_fila");
         final List <Chamado> chamados = busca(nomeFila);
-        ChamadoArrayAdapter adapter =
-                new ChamadoArrayAdapter(this, chamados);
-        chamadosListView.setAdapter(adapter);
-        chamadosListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        /*ChamadoArrayAdapter adapter =
+                new ChamadoArrayAdapter(this, chamados);*/
+        chamadosRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        ChamadoRecyclerViewAdapter adapter =
+                new ChamadoRecyclerViewAdapter(chamados);
+        chamadosRecyclerView.setAdapter(adapter);
+        /*chamadosRecyclerView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Chamado chamadoSelecionado = chamados.get(position);
@@ -36,7 +39,7 @@ public class ListaChamadosActivity extends AppCompatActivity {
                 intent.putExtra("chamado_selecionado", chamadoSelecionado);
                 startActivity(intent);
             }
-        });
+        });*/
     }
 
     public List<Chamado> busca (String nomeFila){
